@@ -1,0 +1,40 @@
+*********************Pseudocode for Selection Sort 
+
+
+BEGIN
+    PROCEDURE SelectionSort(arr, n)
+        FOR i FROM 0 TO n - 2 DO
+            SET min_index TO i
+            FOR j FROM i + 1 TO n - 1 DO
+                IF arr[j] < arr[min_index] THEN
+                    SET min_index TO j
+                ENDIF
+            ENDFOR
+            SWAP arr[i] WITH arr[min_index]
+        ENDFOR
+    END PROCEDURE
+
+
+
+
+
+
+********************Pseudocode for Insertion Sort
+
+BEGIN
+    PROCEDURE InsertionSort(arr, n)
+        FOR i FROM 1 TO n - 1 DO
+            SET key TO arr[i]
+            SET j TO i - 1
+            
+            WHILE j >= 0 AND arr[j] > key DO
+                SET arr[j + 1] TO arr[j]
+                DECREMENT j
+            ENDWHILE
+            
+            SET arr[j + 1] TO key
+        ENDFOR
+    END PROCEDURE
+
+
+
